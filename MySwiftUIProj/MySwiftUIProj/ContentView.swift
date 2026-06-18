@@ -12,10 +12,10 @@ struct ContentView: View {
         NavigationStack {
             VStack() {
                 HStack(spacing: 12){
-                    Image(systemName: "circle")
+                    Image("lens")
                         .resizable()
                         .frame(width:32,height:32)
-                        .padding(.leading, 12)
+                        .padding(.leading, 24)
                     Text("SLOPE")
                         .fontWeight(.heavy)
                     Spacer()
