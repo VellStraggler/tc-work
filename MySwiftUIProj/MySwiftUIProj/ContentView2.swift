@@ -43,7 +43,13 @@ struct ContentView2: View {
                     } label: {
                         Text("LOGIN")
                             .frame(width: 250, height:36)
-                            .background(.blue)
+                            .background {
+                                LinearGradient(
+                                    colors: [Color(red:0, green:0, blue:0.8), .blue],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                            }
                             .bold()
                             .foregroundColor(.white)
                     }
