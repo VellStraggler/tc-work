@@ -199,7 +199,6 @@ Task(priority: .background) {
 actor BirdDatabase {
 
     func fetchBird(id: Int) async -> String {
-
         try? await Task.sleep(
             for: .seconds(1)
         )
@@ -211,7 +210,6 @@ actor BirdDatabase {
 let database = BirdDatabase()
 
 Task {
-
     let birds = await withTaskGroup(
         of: String.self,
         returning: [String].self
@@ -269,7 +267,6 @@ Task {
 // Actor Preventing Race Conditions //
 
 actor Nest {
-
     private var eggs = 0
 
     func layEgg() {
@@ -284,7 +281,6 @@ actor Nest {
 let nest = Nest()
 
 Task {
-
     await withTaskGroup(of: Void.self) { group in
 
         for _ in 1...100 {
