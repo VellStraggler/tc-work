@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView4: View {
+struct GeorgeBushPage: View {
     var itemList = ["bush", "did", "9", "11", "where did", "4 trillion dollars go"]
     var itemList2 = [9,11,9,11,9,11,10,9,8,7,6,5,4,3,2,1]
     var body: some View {
@@ -31,5 +31,5 @@ struct ContentView4: View {
 }
 
 #Preview {
-    ContentView4()
+    GeorgeBushPage()
 }

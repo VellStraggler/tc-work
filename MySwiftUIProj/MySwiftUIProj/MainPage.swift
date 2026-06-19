@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainPage: View {
     var body: some View {
         NavigationStack {
             VStack() {
@@ -33,7 +33,7 @@ struct ContentView: View {
                         .padding(.bottom, 48)
                         .padding(.horizontal, 24)
                     NavigationLink {
-                        ContentView2()
+                        SignInPage()
                     } label: {
                         Text("LOGIN")
                             .frame(width: 250, height:36)
@@ -49,7 +49,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     }
                     NavigationLink {
-                        ContentView3()
+                        SignUpPage()
                     } label: {
                         Text("SIGNUP")
                             .frame(width: 250, height:36)
@@ -65,5 +65,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MainPage()
 }

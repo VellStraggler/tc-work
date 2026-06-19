@@ -1,13 +1,13 @@
 //
-//  MySwiftUIProjUITestsLaunchTests.swift
-//  MySwiftUIProjUITests
+//  Assignment7UITestsLaunchTests.swift
+//  Assignment7UITests
 //
-//  Created by David Wells on 6/17/26.
+//  Created by David Wells on 6/19/26.
 //
 
 import XCTest
 
-final class MySwiftUIProjUITestsLaunchTests: XCTestCase {
+final class Assignment7UITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

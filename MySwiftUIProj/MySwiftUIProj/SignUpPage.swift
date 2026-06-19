@@ -1,5 +1,5 @@
 //
-//  ContentView2.swift
+//  ContentView3.swift
 //  MySwiftUIProj
 //
 //  Created by David Wells on 6/18/26.
@@ -7,21 +7,22 @@
 
 import SwiftUI
 
-struct ContentView2: View {
+struct SignUpPage: View {
     @State var username: String = ""
+    @State var email: String = ""
     @State var password: String = ""
     var body: some View {
         NavigationStack {
-            VStack {
-                VStack {
+            VStack{
                     VStack(alignment: .leading) {
-                        Text("Welcome!")
+                        Text("Hi!")
                             .font(.system(size:42).bold())
                             .padding(.bottom, 6)
-                        Text("Sign in to continue")
+                        Text("Create a new account")
                             .bold()
                             .foregroundStyle(.gray)
-                            .padding(.bottom, 84)
+                            .padding(.bottom, 48)
+                        
                         TextField("username", text: $username)
                             .overlay(alignment: .bottom) {
                                 Rectangle()
@@ -29,31 +30,41 @@ struct ContentView2: View {
                                     .foregroundColor(.gray)
                             }
                             .padding(.bottom, 64)
+                        
+                        TextField("email", text: $email)
+                            .overlay(alignment: .bottom) {
+                                Rectangle()
+                                    .frame(height:1)
+                                    .foregroundColor(.gray)
+                            }
+                            .padding(.bottom, 64)
+                        
                         SecureField("password", text: $password)
                             .overlay(alignment: .bottom) {
                                 Rectangle()
                                     .frame(height:1)
                                     .foregroundColor(.gray)
                             }
+                        
                     }.padding(.trailing, 48)
                         .padding(.bottom, 42)
                         .padding(.top, 96)
-                    NavigationLink {
-                        ContentView4()
-                    } label: {
-                        Text("LOGIN")
-                            .frame(width: 250, height:36)
-                            .background {
-                                LinearGradient(
-                                    colors: [Color(red:0, green:0, blue:0.8), .blue],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                            }
-                            .bold()
-                            .foregroundColor(.white)
-                    }
-                    Text("Forgot Password?")
+                NavigationLink {
+                    GeorgeBushPage()
+                } label: {
+                    Text("LOGIN")
+                        .frame(width: 250, height:36)
+                        .background {
+                            LinearGradient(
+                                colors: [Color(red:0, green:0, blue:0.8), .blue],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        }
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding(.bottom, 36)
+                }
                     HStack {
                         Rectangle()
                             .frame(height:1)
@@ -75,21 +86,20 @@ struct ContentView2: View {
                             .resizable()
                             .frame(width:36, height:36)
                     }.padding()
-                    HStack {
-                        Text("Don't have an account?")
-                        NavigationLink {
-                            ContentView3()
-                        } label : {
-                            Text("Sign Up")
-                        }
-                        Spacer()
+                HStack {
+                    Text("Already have an account?")
+                    NavigationLink {
+                        SignInPage()
+                    } label: {
+                        Text("Sign In")
                     }
-                }.padding()
-            }.padding()
+                    Spacer()
+                }
+            }.padding(24)
         }
     }
 }
 
 #Preview {
-    ContentView2()
+    SignUpPage()
 }

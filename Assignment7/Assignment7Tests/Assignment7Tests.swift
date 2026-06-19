@@ -1,14 +1,14 @@
 //
-//  MySwiftUIProjTests.swift
-//  MySwiftUIProjTests
+//  Assignment7Tests.swift
+//  Assignment7Tests
 //
-//  Created by David Wells on 6/17/26.
+//  Created by David Wells on 6/19/26.
 //
 
 import XCTest
-@testable import MySwiftUIProj
+@testable import Assignment7
 
-final class MySwiftUIProjTests: XCTestCase {
+final class Assignment7Tests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
